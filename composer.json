@@ -1,0 +1,63 @@
+{
+    "name": "ali/laravel-agent-evals",
+    "description": "Define AI-agent behavior as test cases, run them against your real agent, and automatically catch regressions before they ship.",
+    "keywords": [
+        "laravel",
+        "ai",
+        "agent",
+        "eval",
+        "evals",
+        "testing",
+        "llm",
+        "regression-testing"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ali",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/console": "^10.0|^11.0|^12.0",
+        "illuminate/routing": "^10.0|^11.0|^12.0",
+        "illuminate/view": "^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ali\\LaravelAgentEvals\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ali\\LaravelAgentEvals\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ali\\LaravelAgentEvals\\AgentEvalsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --memory-limit=512M",
+        "format": "pint",
+        "format:check": "pint --test"
+    }
+}
