@@ -1,5 +1,5 @@
 {
-    "name": "ali/laravel-agent-evals",
+    "name": "shamrozghouri/laravel-agent-evals",
     "description": "Define AI-agent behavior as test cases, run them against your real agent, and automatically catch regressions before they ship.",
     "keywords": [
         "laravel",

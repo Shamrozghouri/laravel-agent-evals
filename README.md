@@ -22,7 +22,7 @@ Laravel Agent Evals helps you catch broken AI-agent behavior before it reaches p
 ## Installation
 
 ```bash
-composer require ali/laravel-agent-evals
+composer require shamrozghouri/laravel-agent-evals
 php artisan agent:eval:init
 ```
 
