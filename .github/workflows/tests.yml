@@ -41,7 +41,7 @@ jobs:
         with:
           dependency-versions: highest
       - run: composer require --no-update illuminate/support:${{ matrix.laravel }} illuminate/console:${{ matrix.laravel }} orchestra/testbench:^${{ matrix.testbench }}
-      - run: composer update --prefer-dist --no-interaction
+      - run: composer update --prefer-dist --no-interaction --no-blocking
       - run: composer test
       - run: composer analyse
       - run: composer format:check
