@@ -2,6 +2,7 @@
 
 namespace Ali\LaravelAgentEvals\Tests\Feature;
 
+use Ali\LaravelAgentEvals\EvalResult;
 use Ali\LaravelAgentEvals\EvalRunner;
 use Ali\LaravelAgentEvals\Tests\TestCase;
 
@@ -38,7 +39,10 @@ class EvalRunnerNotContainsTest extends TestCase
 
         $report = $runner->run();
 
-        $result = collect($report['results'])
+        /** @var array<int, EvalResult> $results */
+        $results = $report['results'];
+
+        $result = collect($results)
             ->firstWhere('name', 'does not expose internal secret');
 
         $this->assertNotNull($result);
