@@ -22,7 +22,7 @@ jobs:
           coverage: none
 
       - name: Install dependencies
-        run: composer install --no-interaction --prefer-dist --no-progress
+        run: composer install --no-interaction --no-progress --no-audit --no-blocking
 
       - name: Run Agent Evals
         run: php artisan agent:eval --no-baseline-update
