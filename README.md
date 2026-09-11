@@ -28,7 +28,7 @@ It lets you:
 Install the package in your Laravel application:
 
 ```bash
-composer require shamrozghouri/laravel-agent-evals
+composer require shamrozghouri/laravel-agent-evals --dev
 ```
 
 Initialize the package:
